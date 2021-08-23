@@ -19,6 +19,6 @@ app.get('/earth', function(req, res) {
   res.sendFile(path.join(__dirname, './three.html'));
 });
 
-app.listen(3000, function(){
+app.listen(process.env.port || 3000, function(){
 	console.log('listening!');
 })
