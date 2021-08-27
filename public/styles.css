@@ -7,6 +7,25 @@ background-image: url('/spaceAssets/starfield2.jpg');
 
 
 }
+
+body.starfield nav, .starfield .nav-wrapper{
+	opacity: .2;
+	background: #222;
+	transition: .26s;
+}
+
+.starfield nav:hover, .starfield .nav-wrapper:hover {
+	opacity: 1;
+	background: #222;
+	color: #fff;
+}
+
+
+
+
+
+
+
 .loader {
   color: #ee6e73;
   font-size: 90px;
