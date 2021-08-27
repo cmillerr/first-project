@@ -14,7 +14,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 $('.body').append(renderer.domElement);
 
-//making the scene a box (lenght, width, height)
+//making the scene a box (lenghth, width, height)
 const material = new THREE.MeshPhongMaterial({ color:0xff100f});
 
 
@@ -75,13 +75,14 @@ scene.add(cloud);
 camera.position.z = 12;
 
 var aLight = new THREE.AmbientLight(0x888888);
-
+//spotlight color, intensity
 var moonLight = new THREE.SpotLight(0xffffff,15);
 moonLight.position.set(10, 0, 10); 
+//what the spotlight focused on
 moonLight.target = sphere;
 moonLight.angle = 0.4;
 moonLight.distance = 14;
-
+//to actually put it in scene
 scene.add(aLight);
 scene.add(moonLight);
 

@@ -31,7 +31,7 @@ $(document).ready(function () {
 			M.toast({html: err.responseJSON.message, classes: 'rounded red'})
 		},
 		success: function(data){
-//adds token into session variable, ()
+//saves token into session variable
 		sessionStorage.setItem('spaceProjToken', data.token);
 		console.log("datafromserver")
 		console.log(data)

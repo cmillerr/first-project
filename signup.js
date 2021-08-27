@@ -28,7 +28,7 @@ $(document).ready(function () {
 				contentType: "application/json",
 				data: JSON.stringify(signUpObj),
 				success: function (data) {
-			//adds token into session variable
+//saves token into session variable
 					sessionStorage.setItem('spaceProjToken', data.token);
 					console.log("datafromserver");
 					console.log(data);

@@ -11,7 +11,7 @@ $(document).ready(function(){
     }else sessionExit();
 	})
 
-
+	//if token is valid send to earth page when clicked 
 	$('#earth').on('click',() =>{
     if(sessionStorage.getItem('spaceProjToken')) {
     	window.location.href = "/earth?t=" + sessionStorage.getItem('spaceProjToken');
@@ -19,7 +19,7 @@ $(document).ready(function(){
 	})
 
 
-
+	//if token is valid send to spacepic page when clicked 
 	$('#logout').on('click',() =>{
     if(sessionStorage.getItem('spaceProjToken')) {
     	sessionStorage.removeItem('spaceProjToken');
