@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="./public/styles.css"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -11,8 +12,6 @@
 				font-size: 100px;
 			}
 
-				font-family: "Dosis", sans-serif;
-			}
 		</style>
 
 		<!--Import Google Icon Font-->
@@ -20,6 +19,8 @@
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
+
+		<link rel="stylesheet" type="text/css" href="./public/styles.css"/>
 		
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,10 +36,21 @@
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	</head>
 	<body>
-
-		
+			<nav>
+    <div class="nav-wrapper">
+      <ul class="right">
+       <li id="spacePic"><a href="#"><i class="material-icons">collections</i></a></li>
+       <li id="earth"><a href="#"><i class="material-icons">public</i></a></li>
+       <li id="logout"><a href="#"><i class="material-icons">logout</i></a></li>
+      </ul>
+    </div>
+  </nav>
 		<div class="container">
 			<div class="row nasa">
+				<div class="loaderrow">
+			<div class="loader"></div>
+			<div style="width: 100%; text-align: center">loading pics from nasa</div>
+				</div>
 				
 			</div>
 		</div>
@@ -59,6 +71,7 @@
 					url:api + "?count=20&api_key=" + key,
 					method: "GET", 
 					success: function (data){
+						$('.loaderrow').css('display', 'none');
 						console.log(data);
 						$('.activator').attr('src', data.url)
 						for (let i=0; i<data.length; i++){
@@ -95,5 +108,6 @@
 			})
 		</script>
 	</div>
+	<script src="./nav.js"></script>
 	</body>
 </html>
